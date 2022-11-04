@@ -58,7 +58,7 @@ def main():
   
   args = parser.parse_args()
 
-  files = FileTree(args.path)
+  files = FileTree(os.path.abspath(args.path))
 
   files.print_file_tree()
 
