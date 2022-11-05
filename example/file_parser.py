@@ -16,18 +16,18 @@ from FileVisitorFileSize import *
 
 def main():
     parser = argparse.ArgumentParser(description='Parse file structure')
-    parser.add_argument("--path", "-p", help="Root path", type=str, default=".")
+    parser.add_argument("--path", "-p", help="Root path (relative)", type=str, default=".")
   
     args = parser.parse_args()
 
-    files = FileTree(os.path.abspath(args.path),[FileFilterDir(["test"]),
-                                                 FileFilterDir(["example"]),
-                                                 FileFilterFile([".*\.py"]),
-                                                 FileFilterFile([".*\.c"]),
-                                                 FileFilterFile([".*\.txt"])],
-                                                [FileVisitorPrintFilepaths(),
-                                                 FileVisitorPrintFileCount(),
-                                                 FileVisitorFileSize()])
+    files = FileTree(args.path,[FileFilterDir(["test"]),
+                                FileFilterDir(["example"]),
+                                FileFilterFile([".*\.py"]),
+                                FileFilterFile([".*\.c"]),
+                                FileFilterFile([".*\.txt"])],
+                               [FileVisitorPrintFilepaths(),
+                                FileVisitorPrintFileCount(),
+                                FileVisitorFileSize()])
 
     print("")
     print("File tree as string:")

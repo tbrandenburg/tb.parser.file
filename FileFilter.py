@@ -8,5 +8,5 @@ class FileFilter(ABC):
         pass
 
     @abstractmethod
-    def filter(self,isDir,filePath,fileName) -> bool:
+    def filter(self,isDir,relFilePath,absFilePath,fileName) -> bool:
         return True

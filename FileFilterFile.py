@@ -5,7 +5,7 @@ from FileFilter import *
 
 class FileFilterFile(FileFilter):
 
-    def filter(self,isDir,filePath,fileName) -> bool:
+    def filter(self,isDir,relFilePath,absFilePath,fileName) -> bool:
         if isDir:
             return False
         else:

@@ -5,9 +5,9 @@ from FileFilter import *
 
 class FileFilterDir(FileFilter):
 
-    def filter(self,isDir,filePath,fileName) -> bool:
+    def filter(self,isDir,relFilePath,absFilePath,fileName) -> bool:
         if isDir:
-            dirList = os.path.normpath(filePath).split(os.sep)
+            dirList = os.path.normpath(relFilePath).split(os.sep)
             for regEx in self._filterList:
                 regExC = re.compile(regEx)
                 try:

@@ -2,12 +2,12 @@ from FileVisitor import *
 
 class FileVisitorPrintFileCount(FileVisitor):
 
-    __fileList = list()
+    __fileCount = 0
 
-    def visit(self,isDir,filePath) -> dict:
+    def visit(self,isDir,relFilePath,absFilePath,fileName) -> bool:
         if not isDir:
-            self.__fileList.append(filePath)
+            self.__fileCount = self.__fileCount + 1
         return dict()
 
     def report(self):
-        print("Found " + str(len(self.__fileList)) + " files!")
+        print("Found " + str(self.__fileCount) + " files!")

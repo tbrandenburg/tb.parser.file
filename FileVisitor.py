@@ -6,7 +6,7 @@ class FileVisitor(ABC):
         pass
 
     @abstractmethod
-    def visit(self,isDir,filePath) -> dict:
+    def visit(self,isDir,relFilePath,absFilePath,fileName) -> bool:
         return dict()
 
     def report(self):

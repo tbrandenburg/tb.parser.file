@@ -13,12 +13,13 @@ class FileTree:
 
         for dirEntry in os.scandir(path):
             isDir = not dirEntry.is_file()
+            fileRelPath = os.path.join(path,dirEntry.name)
             fileAbsPath = os.path.join(os.path.abspath(path),dirEntry.name)
             fileName = dirEntry.name
 
             filtered = False
             for filter in self.__fileFilter:
-                if filter.filter(isDir, fileAbsPath, fileName):
+                if filter.filter(isDir, fileRelPath, fileAbsPath, fileName):
                     filtered = True
                     break
 
@@ -29,7 +30,7 @@ class FileTree:
                     fileDict[fileName] = {"is_dir":isDir}
                 # Call file visitors visit method
                 for visitor in self.__fileVisitors:
-                    fileDict[fileName].update(visitor.visit(isDir,fileAbsPath))
+                    fileDict[fileName].update(visitor.visit(isDir,fileRelPath,fileAbsPath,fileName))
 
         return fileDict
 
