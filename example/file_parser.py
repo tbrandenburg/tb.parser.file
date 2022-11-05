@@ -11,6 +11,7 @@ from FileTree import *
 from FileFilterDir import *
 from FileFilterFile import *
 from FileVisitorPrintFilepaths import *
+from FileVisitorPrintFileCount import *
 from FileVisitorFileSize import *
 
 def main():
@@ -25,6 +26,7 @@ def main():
                                                  FileFilterFile([".*\.c"]),
                                                  FileFilterFile([".*\.txt"])],
                                                 [FileVisitorPrintFilepaths(),
+                                                 FileVisitorPrintFileCount(),
                                                  FileVisitorFileSize()])
 
     print("")
