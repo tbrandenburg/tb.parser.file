@@ -27,7 +27,7 @@ FileVisitorPrintFilepaths.py
     myfile2.c
 ~~~
 
-As dict:
+As dict (with file size visitor):
 
 ~~~bash
 {'FileFilter.py': {'is_dir': False, 'size': 281},
@@ -47,7 +47,7 @@ As dict:
           'is_dir': True}}
 ~~~
 
-As JSON:
+As JSON (with file size visitor):
 
 ~~~bash
 {
