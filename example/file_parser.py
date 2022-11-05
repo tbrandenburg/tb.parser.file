@@ -16,7 +16,7 @@ from FileVisitorFileSize import *
 
 def main():
     parser = argparse.ArgumentParser(description='Parse file structure')
-    parser.add_argument("--path", "-p", help="Parent path", type=str, default=".")
+    parser.add_argument("--path", "-p", help="Root path", type=str, default=".")
   
     args = parser.parse_args()
 
