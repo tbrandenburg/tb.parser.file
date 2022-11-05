@@ -1,0 +1,20 @@
+import os
+import re
+
+from FileFilter import *
+
+class FileFilterDir(FileFilter):
+
+    def filter(self,isDir,filePath,fileName) -> bool:
+        if isDir:
+            dirList = os.path.normpath(filePath).split(os.sep)
+            for regEx in self._filterList:
+                regExC = re.compile(regEx)
+                try:
+                    if any((match := regExC.match(dir)) for dir in dirList):
+                        return True
+                except:
+                    return False
+            return False
+        else:
+            return False
