@@ -13,19 +13,20 @@ As string:
 
 ~~~bash
 [example]
-  file_parser.py
+    file_parser.py
 FileFilter.py
 FileFilterDir.py
 FileFilterFile.py
 FileTree.py
 FileVisitor.py
 FileVisitorFileSize.py
+FileVisitorPrintFileCount.py
 FileVisitorPrintFilepaths.py
 [test]
-  CMakeLists.txt
-  myfile.c
-  [subdir]
-    myfile2.c
+    CMakeLists.txt
+    myfile.c
+    [subdir]
+        myfile2.c
 ~~~
 
 As dict (with file size visitor):

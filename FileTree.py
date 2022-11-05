@@ -6,6 +6,8 @@ class FileTree:
     __fileFilter   = list()
     __fileVisitors = list()
 
+    __PREFIX       ="  +-"
+
     def __parse_file_tree(self, path):
         fileDict = dict()
 
@@ -63,7 +65,7 @@ class FileTree:
         for (file, values) in fileTree.items():
             if values["is_dir"]:
                 fileTreeStr = fileTreeStr + prefix + "[" + file + "]" + os.linesep
-                fileTreeStr = fileTreeStr + self.__file_tree_str(values["children"], prefix + "  ")
+                fileTreeStr = fileTreeStr + self.__file_tree_str(values["children"], prefix + "    ")
             else:
                 fileTreeStr = fileTreeStr + prefix + file + os.linesep
         return fileTreeStr
