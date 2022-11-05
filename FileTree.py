@@ -54,8 +54,8 @@ class FileTree:
     def get_dict(self):
         return self.__fileTree
 
-    def to_json(self, jsonPath):
-        jsonObj = json.dumps(self.__fileTree, indent = 4)
+    def to_json(self, jsonPath, intentation = 4):
+        jsonObj = json.dumps(self.__fileTree, indent = intentation)
         os.makedirs(os.path.dirname(os.path.abspath(jsonPath)), exist_ok=True)
         with open(os.path.abspath(jsonPath), "w") as jsonFile:
             jsonFile.write(jsonObj)
