@@ -2,6 +2,7 @@
 
 Parse file structure with python supporting:
 
+- File tree output
 - Filters
 - Visitors
 - JSON output
