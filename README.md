@@ -8,6 +8,8 @@ Parse file structure with python supporting:
 
 ## Sample output
 
+As string:
+
 ~~~bash
 [example]
   file_parser.py
@@ -23,6 +25,26 @@ FileVisitorPrintFilepaths.py
   myfile.c
   [subdir]
     myfile2.c
+~~~
+
+As dict:
+
+~~~bash
+{'FileFilter.py': {'is_dir': False, 'size': 281},
+ 'FileFilterDir.py': {'is_dir': False, 'size': 575},
+ 'FileFilterFile.py': {'is_dir': False, 'size': 440},
+ 'FileTree.py': {'is_dir': False, 'size': 2656},
+ 'FileVisitor.py': {'is_dir': False, 'size': 237},
+ 'FileVisitorFileSize.py': {'is_dir': False, 'size': 264},
+ 'FileVisitorPrintFilepaths.py': {'is_dir': False, 'size': 328},
+ 'example': {'children': {'file_parser.py': {'is_dir': False, 'size': 1369}},
+             'is_dir': True},
+ 'test': {'children': {'CMakeLists.txt': {'is_dir': False, 'size': 0},
+                       'myfile.c': {'is_dir': False, 'size': 25},
+                       'subdir': {'children': {'myfile2.c': {'is_dir': False,
+                                                             'size': 32}},
+                                  'is_dir': True}},
+          'is_dir': True}}
 ~~~
 
 ## Example
