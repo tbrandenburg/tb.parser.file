@@ -47,6 +47,72 @@ As dict:
           'is_dir': True}}
 ~~~
 
+As JSON:
+
+~~~bash
+{
+    "example": {
+        "is_dir": true,
+        "children": {
+            "file_parser.py": {
+                "is_dir": false,
+                "size": 1369
+            }
+        }
+    },
+    "FileFilter.py": {
+        "is_dir": false,
+        "size": 281
+    },
+    "FileFilterDir.py": {
+        "is_dir": false,
+        "size": 575
+    },
+    "FileFilterFile.py": {
+        "is_dir": false,
+        "size": 440
+    },
+    "FileTree.py": {
+        "is_dir": false,
+        "size": 2656
+    },
+    "FileVisitor.py": {
+        "is_dir": false,
+        "size": 237
+    },
+    "FileVisitorFileSize.py": {
+        "is_dir": false,
+        "size": 264
+    },
+    "FileVisitorPrintFilepaths.py": {
+        "is_dir": false,
+        "size": 328
+    },
+    "test": {
+        "is_dir": true,
+        "children": {
+            "CMakeLists.txt": {
+                "is_dir": false,
+                "size": 0
+            },
+            "myfile.c": {
+                "is_dir": false,
+                "size": 25
+            },
+            "subdir": {
+                "is_dir": true,
+                "children": {
+                    "myfile2.c": {
+                        "is_dir": false,
+                        "size": 32
+                    }
+                }
+            }
+        }
+    }
+}
+~~~
+
 ## Example
 
 ~~~bash
