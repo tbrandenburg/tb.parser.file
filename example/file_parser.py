@@ -30,15 +30,15 @@ def main():
                                 FileVisitorFileSize()])
 
     print("")
-    print("File tree as string:")
+    print("[file-parser] File tree as string:")
     print(files)
 
     print("")
-    print("File tree as dict:")
+    print("[file-parser] File tree as dict:")
     pprint.pprint(files.get_dict())
 
     print("")
-    print("Writing json to build/file_tree.json")
+    print("[file-parser] Writing json to build/file_tree.json")
     files.to_json("build/file_tree.json")
 
     return 0

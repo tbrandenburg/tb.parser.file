@@ -10,5 +10,6 @@ class FileVisitorPrintFilepaths(FileVisitor):
         return dict()
 
     def report(self):
+        print("[FileVisitorPrintFileCount] File paths:")
         for file in self.__fileList:
             print(file)

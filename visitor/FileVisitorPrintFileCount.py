@@ -10,4 +10,4 @@ class FileVisitorPrintFileCount(FileVisitor):
         return dict()
 
     def report(self):
-        print("Found " + str(self.__fileCount) + " files!")
+        print("[FileVisitorPrintFileCount] Found " + str(self.__fileCount) + " files!")
