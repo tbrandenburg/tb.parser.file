@@ -4,6 +4,7 @@ Parse file structure with python supporting:
 
 - Filters
 - Visitors
+- JSON output
 
 ## Sample output
 
