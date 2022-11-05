@@ -5,7 +5,8 @@ import pprint
 
 import sys
 sys.path.insert(0,'.')
-sys.path.insert(0,'..')
+sys.path.insert(0,'./visitor')
+sys.path.insert(0,'./filter')
 
 from FileTree import *
 from FileFilterDir import *
@@ -21,7 +22,6 @@ def main():
     args = parser.parse_args()
 
     files = FileTree(args.path,[FileFilterDir(["test"]),
-                                FileFilterDir(["example"]),
                                 FileFilterFile([".*\.py"]),
                                 FileFilterFile([".*\.c"]),
                                 FileFilterFile([".*\.txt"])],
