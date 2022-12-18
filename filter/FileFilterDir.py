@@ -9,8 +9,8 @@ class FileFilterDir(FileFilter):
         if isDir:
             dirList = os.path.normpath(relFilePath).split(os.sep)
             for regEx in self._filterList:
-                regExC = re.compile(regEx)
                 try:
+                    regExC = re.compile(regEx)
                     if any((match := regExC.match(dir)) for dir in dirList):
                         return True
                 except:
