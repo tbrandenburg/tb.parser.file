@@ -6,6 +6,8 @@ class FileVisitor(ABC):
         pass
 
     @abstractmethod
+    # Returns _dictionary_ as a result of visiting which is
+    # added to the file tree dictionary
     def visit(self,isDir,relFilePath,absFilePath,fileName) -> dict:
         return dict()
 
