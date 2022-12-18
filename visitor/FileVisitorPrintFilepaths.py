@@ -4,7 +4,7 @@ class FileVisitorPrintFilepaths(FileVisitor):
 
     __fileList = list()
 
-    def visit(self,isDir,relFilePath,absFilePath,fileName) -> bool:
+    def visit(self,isDir,relFilePath,absFilePath,fileName) -> dict:
         if not isDir:
             self.__fileList.append(absFilePath)
         return dict()

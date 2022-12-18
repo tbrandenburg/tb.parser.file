@@ -4,7 +4,7 @@ from FileVisitor import *
 
 class FileVisitorFileSize(FileVisitor):
 
-    def visit(self,isDir,relFilePath,absFilePath,fileName) -> bool:
+    def visit(self,isDir,relFilePath,absFilePath,fileName) -> dict:
         if not isDir:
             fileStats = os.stat(absFilePath)
             return {"size":fileStats.st_size}
